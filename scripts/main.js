@@ -4,7 +4,7 @@ const DONNEES = {};
 let categorieChoisie = '';
 const ordreCategories = [];
 const repertoireMedia = 'media/';
-const imgDefautNom = '_defaut.svg'
+const imgDefautNom = 'defaut.svg'
 const imgDefaut = repertoireMedia + imgDefautNom;
 
 const globalLocal = document.querySelector('#globalLocalID');
