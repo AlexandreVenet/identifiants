@@ -4,7 +4,16 @@ Application *front* locale (sans serveur) à lancer en navigateur web pour centr
 
 Tester ici : https://alexandrevenet.github.io/identifiants
 
-La navigation contient les **catégories**. Chaque catégorie est représentée par un **nom** et une **couleur**. Pour modifier cette navigation, éditer `scripts/menu.js` et `styles/couleurs.css`.
+La navigation contient les **catégories**. Chaque catégorie est représentée par un **nom** et une **couleur**. Pour modifier cette navigation, éditer `scripts/menu.js` et `styles/couleurs.css`. Propriétés :
+- `categorie` 
+	- La valeur doit être identique au nom de la propriété utilisée par chaque fichier de données. 
+	- Ex : `video`
+- `classeCSS` 
+	- La valeur doit être identique au nom de la règle de style utilisée pour cette catégorie.
+	- Ex : `.video`
+- `nom` 
+	- La valeur est le texte affiché à l'écran. 
+	- Ex : `Vidéo`
 
 ```JS
 const MENU = 
@@ -26,13 +35,22 @@ const MENU =
 .video { background-color: var(--couleur_video); }
 ```
 
-Chaque catégorie contient des **entrées**. Pour modifier le contenu des catégories, éditer des fichiers dans le répertoire `donnees`. Ces entrées ont pour **propriétés** :
-- le **nom de fichier de l'image** - optionnel car il existe une image par défaut, une image introuvable est remplacée automatiqument par l'image par défaut,
-- un **titre**,
-- un **sous-titre**,
-- une liste de **liens cliquables**,
-- une liste de **textes cliquables** contenant chacun un **intitulé** et un **texte** - cliquer sur le bloc sélectionne automatiquement le texte (et pas l'intitulé),
-- une liste de **textes au kilomètre non cliquables**.
+Chaque catégorie contient des **entrées**. Pour modifier le contenu des catégories, éditer des fichiers dans le répertoire `donnees`. Propriétés :
+- `image` 
+	- Nom du fichier à charger
+	- Optionnel. Par défaut, l'image utilisée est `defaut.svg`.
+	- Si fichier introuvable, l'image par défaut est appelée.
+- `titre`
+	- Texte affiché à l'écran.
+- `sousTitre` 
+	- Texte affiché à l'écran.
+- `liens`
+	- Liste de liens web.
+- `textesCliquables`
+	- Chaque objet de cette liste représente un élément contenant un intitulé et un texte.
+	- Cliquer sur l'élément sélectionne le texte (et pas l'intitulé).
+- `textes` 
+	- Liste de textes au kilomètre.
 
 ```JS
 DONNEES.video = 
@@ -60,5 +78,5 @@ DONNEES.video =
 ```
 
 La **recherche** peut être :
-- **globale** : le texte saisi est recherché dans toutes les catégories, dans le titre et le sous-titre,
+- **globale** : le texte saisi est recherché dans toutes les catégories, les titres et les sous-titres,
 - **locale** : le texte saisi est cherché seulement dans ce qui est affiché à l'écran.
