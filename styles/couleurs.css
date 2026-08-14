@@ -1,0 +1,10 @@
+:root
+{
+	--couleur_administration:#1976D2;
+	--couleur_video:#8E24AA;
+	--couleur_jeu:#78b90e;
+}
+
+.administration { background-color: var(--couleur_administration); }
+.video { background-color: var(--couleur_video); }
+.jeu { background-color: var(--couleur_jeu); }

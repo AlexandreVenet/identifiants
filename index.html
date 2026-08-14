@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Comptes</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles/fontes.css">
+		<link rel="stylesheet" href="styles/couleurs.css">
+		<link rel="stylesheet" href="styles/styles.css">
+		<meta name="referrer" content="no-referrer" />
+	</head>
+	<body>
+		<header>
+			<a href="">
+				<h1>Comptes</h1>
+			</a>
+			<div class="champs">
+				<input type="search" name="recherche" id="rechercheID" placeholder="Recherche">
+				<button type="button" name="globalLocal" id="globalLocalID" data-etat="Global">Global</button>
+			</div>
+		</header>
+		
+		<div class="conteneur">
+			<nav>
+				<!-- 
+					Structure d'un élément de navigation
+					
+					<button type="button" data-nom="video">
+						<div class="couleur video"></div>
+						<span>Vidéo</span>
+					</button>
+				-->
+			</nav>
+			<main>
+				<!-- 
+					Structure d'un élément de contenu
+				
+					<section>
+						<button type="button">
+							<div>
+								<img src="media/image.svg" alt="...">
+							</div>
+							<h2>titre</h2>
+							<p>sous-titre</p>
+						</button>
+						<div class="infos">
+							<a href="https://..." target="_blank">https://...</a>
+							<p class="cliquable"><span>Identifiant : </span><span class="cible">...</span></p>
+							<p class="cliquable"><span>Passe : </span><span class="cible">...</span></p>
+							<p>Texte ordinaire...</p>
+						</div>
+					</section>
+				-->
+			</main>
+		</div>
+		
+		<script src="scripts/menu.js"></script>
+		<script src="scripts/main.js"></script>
+		
+		<script src="donnees/administration.js"></script>
+		<script src="donnees/video.js"></script>
+		<script src="donnees/jeu.js"></script>
+	</body>
+</html>

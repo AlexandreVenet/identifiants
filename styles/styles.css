@@ -1,0 +1,293 @@
+/* 
+	RESET
+*/
+*
+{
+	margin:0;
+	padding:0;
+	border:none;
+	box-sizing: border-box;
+}
+ul,
+li
+{
+	list-style: none;
+	overflow: hidden;
+}
+a
+{
+	text-decoration: none;
+	color:inherit;
+}
+input,
+button
+{
+	background: none;
+}
+
+
+
+/* 
+	VARIABLES
+*/
+:root
+{
+	--couleur_fond:rgb(12,15,20);
+	--couleur_hover:rgba(255,255,255,0.06);
+	--couleur_texte:rgb(204, 204, 204);
+	--couleur_texte_secondaire:rgb(114, 114, 114);
+	--border_radius: 0.4rem;
+	--font_family: open-light, "Trebuchet MS", Tahoma, sans-serif;
+}
+
+
+
+/*
+	CONTENU
+*/
+body
+{
+	background-color: var(--couleur_fond);
+	font-family: var(--font_family);
+	font-size: 1rem;
+	line-height: 1rem;
+	color:var(--couleur_texte);
+	margin: 1rem;
+	min-width: 600px;
+	overflow-y: scroll;
+}
+html
+{
+	scrollbar-width: thin;
+	scrollbar-color: var(--couleur_hover) var(--couleur_fond);
+}
+header,
+.conteneur
+{
+    max-width: 1024px;
+    margin:0 auto;
+}
+button
+{
+	font-family: var(--font_family);
+	font-size: 1rem;
+	text-align: left;
+	line-height: 1rem;
+}
+header
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 2rem;
+}
+header a 
+{
+	display: block;
+	flex-shrink: 0;
+}
+header a:hover
+{
+	background-color: var(--couleur_hover);
+	border-radius: var(--border_radius);
+}
+h1
+{
+	font-weight: 300;
+	font-size: 2rem;
+	padding: 1.5rem 1rem;
+	line-height: 1.6rem;
+}
+.champs
+{
+	display: flex;
+	flex-basis: 40rem;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 2px;
+}
+#globalLocalID
+{
+	border-radius: var(--border_radius);
+	padding: 1.1rem;
+	color:var(--couleur_texte_secondaire);
+	flex-basis: 5.2rem;
+	text-align: center;
+	background-color: var(--couleur_hover);
+}
+#globalLocalID:hover
+{
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+#rechercheID
+{
+	font-family: var(--font_family);
+	font-weight: lighter;
+	font-size: 1rem;
+	line-height: 1rem;
+	border-radius: var(--border_radius);
+	padding: .8rem;
+	border: 2px solid var(--couleur_hover);
+	flex-basis: 10rem;
+	color:var(--couleur_texte_secondaire);
+}
+#rechercheID:focus
+{
+	color:var(--couleur_texte);
+	outline:none;
+}
+#rechercheID:hover
+{
+	border-color: rgba(255, 255, 255, 0.1);
+}
+#rechercheID::placeholder
+{
+	font-style: italic;
+}
+#rechercheID:focus::placeholder
+{
+	opacity: 0;
+}
+.conteneur
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 1rem;
+}
+nav
+{
+	flex-shrink: 0;
+	flex-grow: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap:2px;
+	flex-basis: 14rem;
+}
+nav button
+{
+	display: block;
+	color:var(--couleur_texte);
+	border-radius: var(--border_radius);
+	position: relative;
+}
+nav button:hover
+{
+	background-color: var(--couleur_hover);
+	cursor: pointer;
+}
+nav button.choisi
+{
+	background-color: var(--couleur_hover);
+}
+nav button .couleur
+{
+	width: 2px;
+	height:30%;
+	display: none;
+	position: absolute;
+	z-index: 1;
+	top:34%;
+	left:0;
+}
+nav button.choisi .couleur
+{
+	display: block;
+}
+nav button span
+{
+	padding:1rem;
+	display: block;
+}
+
+
+main
+{
+	flex-shrink: 1;
+	flex-grow: 1;
+}
+main section
+{
+	margin-bottom: 2px;
+	border-radius: var(--border_radius);
+	overflow: hidden;
+}
+main section button
+{
+	display: flex;
+	width: 100%;
+	justify-content: stretch;
+	align-items: center;
+	gap: 1rem;
+	line-height: 1rem;
+	color:var(--couleur_texte);
+	padding: .5rem;
+}
+main section button:hover
+{
+	background-color: var(--couleur_hover);
+	cursor: pointer;
+}
+main section button div
+{
+	line-height: 0;
+	border-radius: var(--border_radius);
+}
+main img
+{
+	width: 1.3rem;
+	margin: .35rem;
+}
+main section button h2,
+main section button p
+{
+	font-weight: lighter;
+	font-size: 1.2rem;
+}
+main section button p
+{
+	color:var(--couleur_texte_secondaire);
+}
+main section .infos
+{
+	display: none;
+	margin: 1rem 0;
+}
+main section.choisie
+{
+	background-color: var(--couleur_hover);
+}
+main section.choisie .infos
+{
+	display: block;
+}
+main section .infos a,
+main section .infos p
+{
+	display: block;
+	padding: .6rem .6rem .6rem 3.6rem;
+	line-height: 1.4rem;
+}
+main section .infos a
+{
+	text-decoration: underline;
+}
+main section .infos a:hover,
+main section .infos p.cliquable:hover
+{
+	background-color: var(--couleur_hover);
+}
+main section .infos p.cliquable
+{
+	cursor: pointer;	
+}
+main section .infos p.cliquable span:first-child
+{
+	color:var(--couleur_texte_secondaire);
+}
+main section.masquee
+{
+	display: none;
+}

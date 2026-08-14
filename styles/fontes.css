@@ -1,0 +1,8 @@
+@font-face 
+{
+	font-family: 'open-light';
+	src: url('../typo/opensans-light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
