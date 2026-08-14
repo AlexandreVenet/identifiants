@@ -35,7 +35,7 @@ const MENU =
 .video { background-color: var(--couleur_video); }
 ```
 
-Chaque catégorie contient des **entrées**. Pour modifier le contenu des catégories, éditer des fichiers dans le répertoire `donnees`. La catégorie est représentée par la propriété dont le nom doit être identique à celui utilisé dans la propriété `categorie` d'un élément de navigation décrit dans `scripts/menu.js` (voir plus haut). Propriétés :
+Chaque catégorie contient des **entrées**. Pour modifier ces entrées, éditer des fichiers dans le répertoire `donnees`. La catégorie est représentée par la propriété dont le nom doit être identique à celui utilisé dans la propriété `categorie` d'un élément de navigation décrit dans `scripts/menu.js` (voir plus haut). Propriétés :
 - `image` 
 	- Nom du fichier à charger
 	- Optionnel. Par défaut, l'image utilisée est `defaut.svg`.
