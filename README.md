@@ -7,10 +7,10 @@ Tester ici : https://alexandrevenet.github.io/identifiants
 La navigation contient les **catégories**. Chaque catégorie est représentée par un **nom** et une **couleur**. Pour modifier cette navigation, éditer `scripts/menu.js` et `styles/couleurs.css`. Propriétés :
 - `categorie` 
 	- La valeur doit être identique au nom de la propriété utilisée par chaque fichier de données. 
-	- Ex : `video`
+	- Ex : `video` pour la catégorie `DONNEES.video`
 - `classeCSS` 
 	- La valeur doit être identique au nom de la règle de style utilisée pour cette catégorie.
-	- Ex : `.video`
+	- Ex : `video` pour la règle `.video`
 - `nom` 
 	- La valeur est le texte affiché à l'écran. 
 	- Ex : `Vidéo`
@@ -35,7 +35,7 @@ const MENU =
 .video { background-color: var(--couleur_video); }
 ```
 
-Chaque catégorie contient des **entrées**. Pour modifier le contenu des catégories, éditer des fichiers dans le répertoire `donnees`. Propriétés :
+Chaque catégorie contient des **entrées**. Pour modifier le contenu des catégories, éditer des fichiers dans le répertoire `donnees`. La catégorie est représentée par la propriété dont le nom doit être identique à celui utilisé dans la propriété `categorie` d'un élément de navigation décrit dans `scripts/menu.js` (voir plus haut). Propriétés :
 - `image` 
 	- Nom du fichier à charger
 	- Optionnel. Par défaut, l'image utilisée est `defaut.svg`.
